@@ -8,7 +8,7 @@ import { Modal } from '@/components/projectscomponent/Modal'
 
 const page = () => {
 
-    const [modal, setmodal] = useState(false)
+    const [modal, setmodal] = useState(null)
 
     const handleopenmodal = (id) => {
         setmodal(id)
@@ -27,10 +27,24 @@ const page = () => {
                             {
                                 pageprojects.map((project) => (
                                     <>
-                                        <Card key={project.title} title={project.title} openmodal={() => handleopenmodal(project.title)} imagep={project.principalimage} />
-                                        <Modal key={project.title} modal={modal === project.title} setmodal={setmodal} title={project.title} desc={project.description} img1={project.image1} img2={project.image2} img3={project.image3} img4={project.image4} />
-
-                                    </>
+                <Card
+                  key={project.title}
+                  title={project.title}
+                  openmodal={() => handleopenmodal(project.id)} // Usar project.id en lugar de project.title
+                  imagep={project.principalimage}
+                />
+                <Modal
+                  key={project.title}
+                  modal={modal === project.id} // Comparar con project.id en lugar de project.title
+                  setmodal={setmodal}
+                  title={project.title}
+                  desc={project.description}
+                  img1={project.image1}
+                  img2={project.image2}
+                  img3={project.image3}
+                  img4={project.image4}
+                />
+              </>
                                 ))
                             }
                         </div>
