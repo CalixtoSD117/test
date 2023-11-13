@@ -26,9 +26,15 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
         </Providers>
+        <Toaster
+        position="top-right"
+        reverseOrder={false}
+        
+      />
       </body>
     </html>
   );
 }
 
-import { Providers } from "./providers";
+import { Providers } from "./providers";import { Toaster } from "react-hot-toast";
+
