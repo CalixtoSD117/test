@@ -24,7 +24,7 @@ const Video = () => {
             mb="80px"
           />
 
-          <div className='grid grid-cols-1 md:grid-cols-3 place-items-center gap-5 mt-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 place-items-center gap-5 mt-10'>
             {projects.map((project) => (
               <>
                 <Card

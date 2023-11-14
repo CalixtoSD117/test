@@ -23,7 +23,7 @@ const page = () => {
             <section className='relative py-16 md:py-20 lg:py-28'>
                 <div className="container">
 
-                        <div className='grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center mt-10'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 place-items-center mt-10'>
                             {
                                 pageprojects.map((project) => (
                                     <>
